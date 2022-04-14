@@ -1,2 +1,4 @@
 aiogram<3.0
 environs~=8.0.0
+brom~=1.0.1b9
+phonenumbers~=8.12.45

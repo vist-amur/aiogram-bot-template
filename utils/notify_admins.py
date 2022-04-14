@@ -3,6 +3,7 @@ import logging
 from aiogram import Dispatcher
 
 from data.config import ADMINS
+from handlers.users import menu
 
 
 async def on_startup_notify(dp: Dispatcher):

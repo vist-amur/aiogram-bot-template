@@ -7,7 +7,9 @@ from loader import dp
 @dp.message_handler(CommandHelp())
 async def bot_help(message: types.Message):
     text = ("Список команд: ",
-            "/start - Начать диалог",
-            "/help - Получить справку")
+            "/start - Начать диалог.",
+            "/help - Получить справку.",
+            "/addr - Наш адрес.",
+            "/menu - Вызвать главное меню.")
     
     await message.answer("\n".join(text))
