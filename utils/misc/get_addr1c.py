@@ -1,7 +1,7 @@
 from brom import *
 from data import config
 
-# rrr
+
 def get_addr1c_brome():
     login = config.LOGIN1C
     client = БромКлиент(config.PUB1C, login.encode("utf-8"), config.PASS1C)
@@ -92,7 +92,7 @@ def get_discounts_1c_brome():
         return []
     for i, y in enumerate(info):
         dict_answer = {"Номенклатура": y.Номенклатура.Наименование, "Артикул": y.Номенклатура.Артикул,
-                      "Старая цена": y.Сумма, "Новая цена": y.НоваяЦена, "Дата окончания акции": y.ДатаОкончания}
+                       "Старая цена": y.Сумма, "Новая цена": y.НоваяЦена, "Дата окончания акции": y.ДатаОкончания}
         list_dict.append(dict_answer)
 
     return list_dict
