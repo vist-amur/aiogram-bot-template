@@ -1,7 +1,7 @@
 from brom import *
 from data import config
 
-
+# rrr
 def get_addr1c_brome():
     login = config.LOGIN1C
     client = БромКлиент(config.PUB1C, login.encode("utf-8"), config.PASS1C)
