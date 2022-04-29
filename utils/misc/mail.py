@@ -7,7 +7,7 @@ async def sendmail(message, state):
     password = config.PASS_MAIL
     try:
         server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
-        server.starttls()
+        # server.starttls()
 
 
         server.login(sender, password)
