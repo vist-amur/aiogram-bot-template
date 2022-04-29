@@ -10,4 +10,6 @@ IP = env.str("ip")  # Тоже str, но для айпи адреса хоста
 PUB1C = env.str("pub1c")  # Адрес публикации базы 1С
 LOGIN1C = env.str("login1c")  # Логин базы 1С
 PASS1C = env.str("pass1c")  # Пароль пользователя 1С
+MAIL_ADMIN = env.str("mailadmin")
+PASS_MAIL = env.str("passmail")
 

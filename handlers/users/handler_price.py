@@ -16,7 +16,7 @@ from handlers.users.menu import get_sales
 async def price(message: types.Message, state: FSMContext):
     await message.answer(
         "Краткая инструкция для составления запроса по ценам и наличию товара: на следующем шаге "
-        "укажите ключевые слова, через запятую, для поиска товара по наименованию, например: 'преч, "
+        "укажите ключевые слова, через запятую, для поиска товара по наименованию, например: 'перч, "
         "дез, шапочк'")
     await Price_steps.prs_keywords.set()
 

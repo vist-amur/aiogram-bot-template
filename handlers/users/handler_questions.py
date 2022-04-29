@@ -8,6 +8,7 @@ from loader import dp
 from states import Questions_steps
 from handlers.users.menu import get_sales
 from utils.misc import get_addr1c
+from utils.misc import mail
 
 
 @dp.message_handler(text='Задать вопрос 📢')
@@ -88,6 +89,7 @@ async def set_phone(message: types.Message, state: FSMContext):
     user_data = await state.get_data()
     get_addr1c.set_questions_1c_brome(user_data['answer_name'], user_data['answer_phone'], user_data['answer_text'])
     await message.answer("Благодарим Вас за обращение в нашу компанию! Мы непременно ответим Вам!")
+    await mail.sendmail(f'user: {message.chat.values}; data: {user_data}', state)
     await state.finish()
     await state.reset_state()
 
