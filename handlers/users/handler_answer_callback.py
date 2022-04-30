@@ -71,7 +71,7 @@ async def set_phone(message: types.Message, state: FSMContext):
     if phonenumbers.is_valid_number(mynumber):
         get_addr1c.set_callback_1c_brome(user_data['answer_name'], user_data['answer_phone'])
         await message.answer("Благодарим Вас за обращение в нашу компанию! Мы непременно перезвоним Вам!")
-        await mail.sendmail(f'user: {message.chat.values}; data: {user_data}', state)
+        await mail.sendmail(f'user {str(message.chat.values["id"])} firstname {message.chat.values["username"]}', state)
     else:
         await message.answer("Номер телефона указан некорректно! Создайте запрос заново!")
         await state.finish()

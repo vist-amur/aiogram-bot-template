@@ -9,7 +9,6 @@ async def sendmail(message, state):
         server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
         # server.starttls()
 
-
         server.login(sender, password)
         server.sendmail(sender, sender, f'Subject: Bot telegram\n{message}')
         server.quit()
@@ -20,4 +19,3 @@ async def sendmail(message, state):
         await state.reset_state()
         print(_ex)
         return f'{_ex}'
-
